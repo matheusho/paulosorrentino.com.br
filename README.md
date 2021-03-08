@@ -4,7 +4,8 @@
 ## Dependencies
 
 * node 14+
-
+* next 10+
+ 
 ## Install
 
 ```sh
@@ -15,4 +16,10 @@ npm install
 
 ```sh
 npm run dev
+```
+
+## Start
+
+```sh
+npm start
 ```
