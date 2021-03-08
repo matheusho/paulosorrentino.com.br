@@ -12,14 +12,26 @@
 npm install
 ```
 
+## Test
+```sh
+npm test
+```
+
 ## Run
 
 ```sh
 npm run dev
 ```
 
+## Build
+
+```sh
+npm run build
+```
+
 ## Start
 
+Fazer buld antes do start do projeto
 ```sh
 npm start
 ```
