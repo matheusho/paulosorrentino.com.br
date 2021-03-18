@@ -1,36 +1,24 @@
 import { useEffect, useState } from 'react'
+import data from 'data/phrases.json'
 
-const { INTERVAL = 10000 } = process.env
+const { PHRASES_INTERVAL = 7000 } = process.env
 
-const buildPhrase = ({ phrase }) => {
-  if (!phrase) {
-    return ''
-  }
-
-  return `"${phrase}"`
-}
+const buildPhrase = ({ phrase }) => `"${phrase}"`
 
 export default function usePhrases() {
   const [phrase, setPhrase] = useState('')
-  const [hasInterval, setHasInterval] = useState(false);
-
-  const fetchPhrase = () => {
-    fetch('/api/phrases')
-      .then((res) => res.json())
-      .then(buildPhrase)
-      .then(setPhrase)
-  }
 
   useEffect(() => {
-    fetchPhrase()
+    const getPhrase = () => {
+      const index = Math.floor(Math.random() * data.length)
+      const phrase = data[index]
+
+      setPhrase(buildPhrase(phrase))
+    }
+
+    getPhrase()
+    setInterval(() => getPhrase(), Number(PHRASES_INTERVAL))
   }, [])
 
-  useEffect(() => {
-    if (!hasInterval) {
-      setHasInterval(true)
-      setInterval(() => fetchPhrase(), INTERVAL)
-    }
-  }, [phrase])
-
-  return [phrase, fetchPhrase]
+  return phrase
 }
