@@ -1,7 +1,7 @@
-import usePhrases from 'hooks/use-phrases';
+import usePhrases from 'hooks/use-phrases'
 
 const Page = () => {
-  const [phrase] = usePhrases();
+  const phrase = usePhrases()
 
   return (
     <div>
@@ -14,6 +14,9 @@ const Page = () => {
         </>
       )}
       <img src="/paulo-sorrentino.png" alt="Paulo Sorrentino" />
+      <a href="https://github.com/matheusho/paulosorrentino.com.br" title="Github" width="42px" height="auto">
+        <img src="/github.svg" alt="Github" />
+      </a>
       <style jsx>
         {`
           div {
@@ -40,6 +43,18 @@ const Page = () => {
             bottom: 0;
             left: 0;
             z-index: -1;
+          }
+
+          a {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+          }
+
+          a img {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
           }
 
           @media only screen and (max-width: 720px) {
