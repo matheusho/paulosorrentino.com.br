@@ -13,9 +13,9 @@ const Page = () => {
           <small>- Sorrentino, Paulo.</small>
         </>
       )}
-      <img src="/paulo-sorrentino.png" alt="Paulo Sorrentino" />
-      <a href="https://github.com/matheusho/paulosorrentino.com.br" title="Github" width="42px" height="auto">
-        <img src="/github.svg" alt="Github" />
+      <img src="/paulo-sorrentino.png" alt="Paulo Sorrentino" className="paulo-sorrentino" />
+      <a href="https://github.com/matheusho/paulosorrentino.com.br" title="Github" target="_blank" className="github">
+        <img src="/github.svg" alt="Github" width="42" height="auto" />
       </a>
       <style jsx>
         {`
@@ -38,7 +38,7 @@ const Page = () => {
             font-style: italic;
           }
 
-          img {
+          img.paulo-sorrentino {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -51,7 +51,7 @@ const Page = () => {
             right: 10px;
           }
 
-          a img {
+          a.github {
             position: fixed;
             bottom: 15px;
             right: 15px;
@@ -70,7 +70,7 @@ const Page = () => {
               font-size: 18px;
             }
 
-            img {
+            img.paulo-sorrentino {
               max-height: 50%;
             }
           }

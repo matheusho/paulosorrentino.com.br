@@ -3,7 +3,7 @@
 
 ## Did you remember a phrase?
 
-Awesome! Add the new phrase at the of file `data/phrases.json` and send the PR.
+Awesome! Add the new phrase at the end of file `data/phrases.json` and send the PR.
 
 ```
 [
@@ -44,7 +44,8 @@ npm run build
 
 ### Start
 
-Fazer buld antes do start do projeto
+Do build before start project
+
 ```sh
 npm start
 ```
