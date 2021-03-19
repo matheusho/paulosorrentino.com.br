@@ -8,9 +8,7 @@ Awesome! Add the new phrase at the end of file `data/phrases.json` and send the 
 ```
 [
   ...,
-  {
-    "phrase": "The new phrase come here, at the end of file"
-  }
+  "The new phrase come here, at the end of file"
 ]
 ```
 

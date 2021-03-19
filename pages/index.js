@@ -1,25 +1,42 @@
+import Head from 'next/head'
 import usePhrases from 'hooks/use-phrases'
 
 const Page = () => {
   const phrase = usePhrases()
 
   return (
-    <div>
-      {phrase && (
-        <>
-          <blockquote>
-            <p>{phrase}</p>
-          </blockquote>
-          <small>- Sorrentino, Paulo.</small>
-        </>
-      )}
-      <img src="/paulo-sorrentino.png" alt="Paulo Sorrentino" className="paulo-sorrentino" />
-      <a href="https://github.com/matheusho/paulosorrentino.com.br" title="Github" target="_blank" className="github">
-        <img src="/github.svg" alt="Github" width="42" height="auto" />
-      </a>
-      <style jsx>
+    <>
+      <Head>
+        <title>Diz aí, Paulo Sorrentino</title>
+        <link rel="shortcut icon" href="/paulo-sorrentino.png" type="image/x-icon" />
+      </Head>
+      <main>
+        {phrase && (
+          <>
+            <blockquote>
+              <p>{phrase}</p>
+            </blockquote>
+            <small>- Sorrentino, Paulo.</small>
+          </>
+        )}
+        <img src="/paulo-sorrentino.png" alt="Paulo Sorrentino" className="paulo-sorrentino" />
+        <a href="https://github.com/matheusho/paulosorrentino.com.br" title="Github" target="_blank" className="github">
+          <img src="/github.svg" alt="Github" width="42" height="auto" />
+        </a>
+      </main>
+      <style jsx global>
         {`
-          div {
+          * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          }
+
+          body {
+            background-color: #000;
+          }
+
+          main {
             width: 70%;
             margin: 0 auto;
             padding: 15px;
@@ -76,7 +93,7 @@ const Page = () => {
           }
         `}
       </style>
-    </div>
+    </>
   )
 }
 

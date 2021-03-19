@@ -3,7 +3,7 @@ import data from 'data/phrases.json'
 
 const { PHRASES_INTERVAL = 10000 } = process.env
 
-const buildPhrase = ({ phrase }) => `"${phrase}"`
+const buildPhrase = (phrase) => `"${phrase}"`
 
 export default function usePhrases() {
   const [phrase, setPhrase] = useState('')
