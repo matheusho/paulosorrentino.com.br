@@ -1,9 +1,9 @@
 # Paulo Sorrentino
-> Dedicado as lindas frases de Paulo Sorrentino.
+> Majestic phrases by Paulo Sorrentino
 
 ## Did you remember a phrase?
 
-Awesome! Add the new phrase at the end of file `data/phrases.json` and send the PR.
+Awesome! Add the new phrase at to the end of file `data/phrases.json` and create your PR.
 
 ```
 [
